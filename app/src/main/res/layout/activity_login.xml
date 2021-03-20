@@ -1,6 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    android:orientation="vertical"
+    android:id="@+id/ll"
+    >
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="207dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="90dp"
+        android:contentDescription="@string/base_com_name"
+        android:src="@mipmap/base_logo"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="45dp"
+        android:gravity="center"
+        android:text="@string/base_app_name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/input_account"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginRight="32dp"
+        android:background="@color/base_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/login_account_icon"/>
+
+        <EditText
+            android:id="@+id/tie_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入用户名"
+            android:inputType="text"
+            android:letterSpacing="0.1"
+            android:paddingLeft="25dp"
+
+            android:textColor="@color/base_text_color"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/ivSpring"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/base_arrow_down"/>
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:src="@mipmap/base_delete_black"
+            android:visibility="gone"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:background="@color/base_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/login_password_icon"/>
+
+        <EditText
+            android:id="@+id/tie_pw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:letterSpacing="0.1"
+            android:paddingLeft="25dp"
+            android:textColor="@color/base_text_color"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="37dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:checked="true"
+                android:paddingBottom="4dp"
+                android:paddingRight="4dp"
+                android:id="@+id/cb_rememberAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:button="@drawable/sm_checkbox_bg"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:text="记住账号"
+                android:textColor="#595959"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/base_set_icon"
+            android:drawablePadding="3dp"
+            android:text="@string/base_setting"
+            android:textColor="#595959"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btm_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/base_confirm_btn_bg"
+        android:paddingLeft="84dp"
+        android:paddingTop="11dp"
+        android:paddingRight="84dp"
+        android:paddingBottom="11dp"
+        android:text="@string/login_button"
+        android:textColor="@color/base_white"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="@string/base_app_name"
+        android:textColor="#9e9e9e"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:text=""
+        android:textColor="#9e9e9e"
+        android:textSize="12sp"/>
 </LinearLayout>

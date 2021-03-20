@@ -22,8 +22,8 @@ import io.reactivex.schedulers.Schedulers;
 public class LoginPresenter extends Rxpresenter<LoginContact.loginIml> implements LoginContact.preseter {
 
     @Override
-    public void login() {
-        addSubscribe(LoginModel.getInstance().login("http://139.9.246.226:8081/DTCG/app/appLogin.action", "01010002277", "123")
+    public void login(String userName,String passWord) {
+        addSubscribe(LoginModel.getInstance().login("http://139.9.246.226:8081/DTCG/app/appLogin.action", userName, passWord)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(new CommonSubscriber<BaseResponse>(mView) {

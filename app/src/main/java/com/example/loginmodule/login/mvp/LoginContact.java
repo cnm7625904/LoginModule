@@ -18,6 +18,6 @@ public interface LoginContact {
          void loginSuccess();
     }
     interface preseter extends BasePresenter<loginIml> {
-            void login();
+            void login(String userName,String passWord);
     }
 }

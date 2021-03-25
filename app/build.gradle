@@ -26,7 +26,11 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
-
+//缓存策略
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 30, 'seconds'
+    resolutionStrategy.cacheDynamicVersionsFor 30, 'seconds'
+}
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -38,4 +42,6 @@ dependencies {
     api 'com.github.cnm7625904:BaseModule:latest.release'
     //网络库
     api 'com.github.cnm7625904:HttpModule:latest.release'
+
+
 }
